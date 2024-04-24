@@ -1,0 +1,1153 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />  
+  <link href="style.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+
+</head>
+<body class="bg-neutral-100">
+    <div class="">
+        <div class="bg-white flex flex-row justify-between items-center py-6 px-8 w-full sticky top-0 z-30 xl:hidden">
+            <div class="logo">
+                <img src="/assets/images/logo.png" alt="">
+            </div>
+            <div class="menu text-neutral-900">
+                <button data-drawer-target="drawer-mobile-navigation" data-drawer-show="drawer-mobile-navigation" aria-controls="drawer-mobile-navigation">
+                    <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="shrink-0 w-8 h-8">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>                
+            </div>
+        </div>
+
+        <div id="drawer-mobile-navigation" class="fixed top-0 left-0 z-40 h-screen px-4 pt-4 pb-10 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800 font-Poppins" tabindex="-1" aria-labelledby="drawer-navigation-label">
+            <ul class="flex flex-col space-y-6">
+                <li class="text-right">
+                    <button data-drawer-hide="drawer-mobile-navigation">
+                        <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="shrink w-6 h-6">
+                            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-row flex-start space-x-2 items-center hover:text-primary-700">
+                        <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-5 h-5">
+                            <path d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>                            
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <button id="dropdownDefaultButton" class="flex space-x-2 items-center hover:text-primary-700 w-full" data-collapse-toggle="dropdown">
+                        <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-5 h-5">
+                            <path d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>   
+                        <span class="flex-1 ms-3 text-left whitespace-nowrap">Manajemen</span>
+                        <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-4 h-4">
+                            <path d="m19.5 8.25-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+
+                    <div id="dropdown" class="hidden z-10 mt-2 pt-2">
+                        <ul class="flex flex-col space-y-2" aria-labelledby="dropdownDefaultButton">
+                            <li>
+                                <a href="#" class="flex items-center w-full p-2 pl-8 hover:text-primary-700">Akun WhatsApp</a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center w-full p-2 pl-8 hover:text-primary-700">Pesan Masuk</a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center w-full p-2 pl-8 hover:text-primary-700">Auto Response</a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center w-full p-2 pl-8 hover:text-primary-700">Auto Follow Up</a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center w-full p-2 pl-8 hover:text-primary-700">Broadcast</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="#" class="flex flex-row flex-start space-x-2 items-start hover:text-primary-700">
+                        <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-5 h-5">
+                            <path d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>  
+                        <span>Pengaturan Akun</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-row flex-start space-x-2 items-center hover:text-primary-700">
+                        <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-5 h-5">
+                            <path d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>   
+                        <span>Paket Data</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-row flex-start space-x-2 items-center hover:text-primary-700">
+                        <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-5 h-5">
+                            <path d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>  
+                        <span>Panduan</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="max-w-full w-full flex flex-col md:flex-row xl:flex-row justify-between space-x-0 xl:space-x-6 px-4 xl:px-0 md:px-6 xl:pr-6">
+            
+            <div class="sidebar hidden w-64 grow-0 shrink-0 bg-white p-8 xl:flex xl:flex-col xl:space-y-8 xl:h-screen xl:sticky xl:top-0">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="logo-shopmatic">
+                </div>
+                <div class="sidebar-menu font-Poppins text-base text-neutral-700">
+                    <ul class="flex flex-col space-y-6">
+                        <li>
+                            <a href="#" class="flex flex-row flex-start space-x-2 items-center hover:text-primary-700">
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-5 h-5">
+                                    <path d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>                            
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <button id="dropdownDefaultButton" class="flex space-x-2 items-center hover:text-primary-700 w-full" data-collapse-toggle="dropdown-desktop">
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-5 h-5">
+                                    <path d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>   
+                                <span class="flex-1 ms-3 text-left whitespace-nowrap">Manajemen</span>
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-4 h-4">
+                                    <path d="m19.5 8.25-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+
+                            <div id="dropdown-desktop" class="hidden z-10 mt-2 pt-2">
+                                <ul class="flex flex-col space-y-2" aria-labelledby="dropdownDefaultButton">
+                                    <li>
+                                        <a href="#" class="flex items-center w-full p-2 pl-8 hover:text-primary-700">Akun WhatsApp</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="flex items-center w-full p-2 pl-8 hover:text-primary-700">Pesan Masuk</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="flex items-center w-full p-2 pl-8 hover:text-primary-700">Auto Response</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="flex items-center w-full p-2 pl-8 hover:text-primary-700">Auto Follow Up</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="flex items-center w-full p-2 pl-8 hover:text-primary-700">Broadcast</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <a href="#" class="flex flex-row flex-start space-x-2 items-start hover:text-primary-700">
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-5 h-5">
+                                    <path d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>  
+                                <span>Pengaturan Akun</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex flex-row flex-start space-x-2 items-center hover:text-primary-700">
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-5 h-5">
+                                    <path d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>   
+                                <span>Paket Data</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex flex-row flex-start space-x-2 items-center hover:text-primary-700">
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="grow-0 w-5 h-5">
+                                    <path d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>  
+                                <span>Panduan</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-area max-w-full w-full flex flex-col space-y-4 shrink grow-0 font-Poppins mt-6">
+                <!-- filter area -->
+                    <div class="filter-area bg-white rounded-lg p-6 flex flex-col md:flex-row xl:flex-row justify-start md:justify-between lg:justify-between xl:justify-between items-start md:items-center lg:items-center xl:items-center space-y-4 md:space-y-0 lg:space-y-0 xl:space-y-0">
+                        <div class="breadcrumb">
+                            <ul class="flex flex-row justify-start items-center space-x-4 text-sm leading-6">
+                                <li class=" font-semibold text-red-700">Upload Data</li>
+                                <li class=" text-neutral-800">
+                                    <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4">
+                                        <path d="m8.25 4.5 7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </li>
+                                <li>Filter</li>
+                            </ul>
+                        </div>
+                        <div class="upload-area">
+                            <button type="button" data-modal-target="upload-modal" data-modal-toggle="upload-modal" class="flex flex-row justify-start items-center space-x-2 text-sm leading-6 py-2 px-4 bg-red-700 text-primary-100 rounded">
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                    <path d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                <span>Upload Data</span>
+                            </button>
+
+                            <!-- modal upload -->
+                            <div id="upload-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                                <div class="relative p-4 w-full max-w-2xl max-h-full">
+                                    <!-- Modal content -->
+                                    <div class="relative bg-white rounded-lg shadow p-8">
+                                        <!-- Modal header -->
+                                        
+                                            
+                                            <button type="button" class="text-gray-400 bg-white text-sm w-8 h-8 ms-auto inline-flex justify-center items-center absolute -right-3 -top-3 rounded-full shadow" data-modal-hide="upload-modal">
+                                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                                </svg>
+                                                <span class="sr-only">Close modal</span>
+                                            </button>
+
+                                            <!-- tab upload -->
+
+
+                                            <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+                                                <ul class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-0 text-sm font-medium text-center" id="upload-tab" data-tabs-toggle="#upload-tab-content" data-tabs-active-classes="text-primary-700 border-primary-700" role="tablist">
+                                                    <li class="" role="presentation">
+                                                        <button class=" w-full flex flex-row justify-start space-x-2 items-center p-4 border-b-2 rounded-t-lg" id="upload-data" data-tabs-target="#upload" type="button" role="tab" aria-controls="upload" aria-selected="false">
+                                                            <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                                                                <path d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                            <span>Upload Data</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="" role="presentation">
+                                                        <button class="w-full flex flex-wrap justify-start space-x-2 items-center p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="validasi-tab" data-tabs-target="#validasi" type="button" role="tab" aria-controls="validasi" aria-selected="false">
+                                                            <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class=" w-5 h-5">
+                                                                <path d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                            <span>Validasi Data</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="" role="presentation">
+                                                        <button class="w-full flex flex-wrap justify-start space-x-2 items-center p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">
+                                                            <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                                                <path d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                            <span>Payment</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div id="upload-tab-content">
+                                                <div class="hidden p-0 md:p-4 lg:p-4 xl:p-4 rounded-lg" id="upload" role="tabpanel" aria-labelledby="upload-tab">
+                                                    
+                                                    <div class="flex flex-row justify-start space-x-3 text-sm mb-4">
+                                                        <span>
+                                                            Select File ( .xlsx or .csv ) 
+                                                        </span>
+                                                        <button type="button" class="flex flex-row justify-start items-center text-primary-700">
+                                                            <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4">
+                                                                <path d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                            <span class="underline">Template</span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-center w-full mb-6">
+                                                        <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                                                <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                                                </svg>
+                                                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>                                                                
+                                                            </div>
+                                                            <input id="dropzone-file" type="file" class="hidden" />
+                                                        </label>
+                                                    </div> 
+
+                                                    <div class="btn-wrapper flex flex-row justify-end items-center">
+                                                        <button type="button" class="flex flex-row justify-start items-center space-x-1 py-2 px-4 bg-primary-700 rounded text-white">
+                                                            <span class=" text-sm leading-6">Next</span>
+                                                            <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4">
+                                                                <path d="m8.25 4.5 7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>                                                    
+
+                                                </div>
+                                                <div class="hidden" id="validasi" role="tabpanel" aria-labelledby="validasi-tab">
+                                                    <div class="filtercs">                                                        
+                                                        <ul class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2 md:gap-4 lg:gap-4 xl:gap-4">
+                                                            <li>
+                                                                <input type="radio" name="filtercs" id="all" class="hidden peer">
+                                                                <label for="all" class="flex flex-row justify-between items-center py-1 pr-1 pl-3 max-w-32 bg-neutral-200 peer-checked:bg-primary-700 rounded-full text-neutral-900 peer-checked:text-white cursor-pointer group">
+                                                                    <span class="text-xs leading-6">Semua</span>
+                                                                    <span class="text-xs leading-6 rounded-full px-3 bg-neutral-700  group-[#all:checked~&]:bg-primary-800 text-white m-1">200</span>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" name="filtercs" id="cs1" class="hidden peer">
+                                                                <label for="cs1" class="flex flex-row justify-between items-center py-1 pr-1 pl-3 max-w-32 bg-neutral-200 peer-checked:bg-primary-700 rounded-full text-neutral-900 peer-checked:text-white cursor-pointer group">
+                                                                    <span class="text-xs leading-6">CS 1</span>
+                                                                    <span class="text-xs leading-6 rounded-full px-3 bg-neutral-700  group-[#cs1:checked~&]:bg-primary-800  text-white m-1">80</span>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" name="filtercs" id="cs2" class="hidden peer">
+                                                                <label for="cs2" class="flex flex-row justify-between items-center py-1 pr-1 pl-3 max-w-32 bg-neutral-200 peer-checked:bg-primary-700 rounded-full text-neutral-900 peer-checked:text-white cursor-pointer group">
+                                                                    <span class="text-xs leading-6">CS 2</span>
+                                                                    <span class="text-xs leading-6 rounded-full px-3 bg-neutral-700  group-[#cs2:checked~&]:bg-primary-800  text-white m-1">80</span>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" name="filtercs" id="nocs" class="hidden peer">
+                                                                <label for="nocs" class="flex flex-row justify-between items-center py-1 pr-1 pl-3 max-w-32 bg-neutral-200 peer-checked:bg-primary-700 rounded-full text-neutral-900 peer-checked:text-white cursor-pointer group">
+                                                                    <span class="text-xs leading-6">Tanpa CS</span>
+                                                                    <span class="text-xs leading-6 rounded-full px-3 bg-neutral-700  group-[#nocs:checked~&]:bg-primary-800  text-white m-1">80</span>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- select cs filter -->
+                                                    <div class="selectcs mt-8 mb-2">
+                                                        <form class="flex flex-row justify-start items-center space-x-2">
+                                                            <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm leading-6 rounded block py-1 px-4">
+                                                                <option selected>-- Pilih cs --</option>
+                                                                <option value="cs1">Cs 1</option>
+                                                                <option value="cs2">Cs 2</option>
+                                                            </select>
+                                                            <button type="submit" class="py-1 px-4 text-sm leading-6 bg-primary-700 text-white rounded">Apply</button>
+                                                        </form>
+                                                    </div>
+                                                    <!-- / select cs filter -->
+                                                    <div class="tablecs mt-3 relative overflow-x-auto">
+                                                        <!-- table -->
+                                                         <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                                                            <thead class="text-xs text-gray-700 uppercase bg-neutral-100">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th scope="col" class="px-6 py-3">
+                                                                        Tanggal
+                                                                    </th>
+                                                                    <th scope="col" class="px-6 py-3">
+                                                                        Customer
+                                                                    </th>
+                                                                    <th scope="col" class="px-6 py-3">
+                                                                        WA Name
+                                                                    </th>
+                                                                    <th scope="col" class="px-6 py-3">
+                                                                        WhatsApp
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="odd:bg-white even:bg-gray-50 ">
+                                                                    <td class="pl-3">
+                                                                        <input type="checkbox" name="" id="">
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        12/04/2024
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        082124575452
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        Budi Gunawan
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        Cs 1
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="odd:bg-white even:bg-gray-50 ">
+                                                                    <td class="pl-3">
+                                                                        <input type="checkbox" name="" id="">
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        12/04/2024
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        082124575452
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        Firman
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        Cs 1
+                                                                    </td>
+                                                                </tr>
+                                                                 <tr class="odd:bg-white even:bg-gray-50 !bg-red-100">
+                                                                    <td class="pl-3">
+                                                                        <input type="checkbox" name="" id="">
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        12/04/2024
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        082124575452
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                       Ani
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        Tanpa cs
+                                                                    </td>
+                                                                </tr>
+                                                                 <tr class="odd:bg-white even:bg-gray-50 ">
+                                                                    <td class="pl-3">
+                                                                        <input type="checkbox" name="" id="">
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        12/04/2024
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        082124575452
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        Rina
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        Cs 2
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="odd:bg-white even:bg-gray-50 !bg-red-100">
+                                                                    <td class="pl-3">
+                                                                        <input type="checkbox" name="" id="">
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        12/04/2024
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        082124575452
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        Dodi
+                                                                    </td>
+                                                                    <td class="px-6 py-4">
+                                                                        Tanpa cs
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- /table -->
+                                                    </div>
+                                                    <!-- next -->
+                                                    <div class="btn-wrapper flex flex-row justify-end items-center mt-6">
+                                                        <button type="button" class="flex flex-row justify-start items-center space-x-1 py-2 px-4 bg-primary-700 rounded text-white">
+                                                            <span class=" text-sm leading-6">Next</span>
+                                                            <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4">
+                                                                <path d="m8.25 4.5 7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <!-- /next -->
+                                                </div>
+                                                <div class="hidden p-4 rounded-lg" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                                                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                                                        comming soon
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <!-- /tab upload -->
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /modal upload -->
+
+                        </div>
+                    </div>
+                <!-- /filter area -->
+
+                <!-- date filter -->
+                    <div class="filter-date flex flex-row justify-between items-center">
+                        <div class="list-akun-wa">
+                            <button type="button" data-dropdown-toggle="dropdownlistwa" class="flex flex-row justify-between items-center space-x-3 md:space-x-9 lg:space-x-9 xl:space-x-9 px-4 py-2 bg-white rounded"  data-dropdown-offset-skidding="35">
+                                <span class=" text-sm leading-6">Semua Akun</span>
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4">
+                                    <path d="m19.5 8.25-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <!-- dropdown whatsapp -->
+                            <div id="dropdownlistwa" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700">
+                                <ul class="px-4 py-4 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+                                    <li class="flex items-start mb-4">
+                                        <input id="checkbox-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Budi Gunawan</label>
+                                    </li>
+                                    <li class="flex items-start mb-4">
+                                            <input id="checkbox-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="checkbox-2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ferdinand Sinaga</label>
+                                    </li> 
+                                </ul>
+                            </div>
+                            <!-- /dropdown whatsapp -->
+                        </div>
+                        <div class="filter-tanggal">
+                            <button type="button" class="flex flex-row justify-between items-center space-x-3 md:space-x-9 lg:space-x-9 xl:space-x-9 px-4 py-2 bg-white rounded ">
+                                <div class="date-area flex flex-row justify-start items-center space-x-2">
+                                    <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                        <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span class=" text-sm leading-6">Pilih Tanggal</span>
+                                </div>                                
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4">
+                                    <path d="m19.5 8.25-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>                    
+                <!-- /date filter -->
+
+                <!-- widget area -->
+                    <div class="widget-area grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+                        <div class="bg-white px-4 py-5 rounded-lg flex flex-grow-0 flex-row justify-between items-center">
+                            <div class="desc flex flex-col">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#7e22ce" class="w-6 h-6 mb-2" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="M11.315 10.014a.5.5 0 0 1 .548.736A4.5 4.5 0 0 1 7.965 13a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242s1.46-.118 2.152-.242a27 27 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434m6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434"/>
+                                  </svg>
+                                <span class=" font-semibold text-neutral-900">Dalam Pengiriman</span>
+                                <span class=" font-semibold text-neutral-900 text-2xl">150</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div id="chart1" class="max-w-24"></div>
+                                <a class="text-center text-sm text-primary-700 underline" href="#">detail</a>
+                            </div>
+                            
+
+                        </div>
+                        <div class="bg-white px-4 py-5 rounded-lg flex flex-row justify-between items-center">
+                            <div class="desc flex flex-col">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ea580c" class="w-6 h-6 mb-2" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="M4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m5 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                                  </svg>
+                                <span class=" font-semibold text-neutral-900">Kiriman Bermasalah</span>
+                                <span class=" font-semibold text-neutral-900 text-2xl">40</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div id="chart2" class="max-w-24"></div>
+                                <a class="text-center text-sm text-primary-700 underline" href="#">detail</a>
+                            </div>
+                        </div>
+                        <div class="bg-white px-4 py-5 rounded-lg flex flex-row justify-between items-center">
+                            <div class="desc flex flex-col">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#facc15" class="w-6 h-6 mb-2" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="M6.831 11.43A3.1 3.1 0 0 1 8 11.196c.916 0 1.607.408 2.25.826.212.138.424-.069.282-.277-.564-.83-1.558-2.049-2.532-2.049-.53 0-1.066.361-1.536.824q.126.27.232.535.069.174.135.373ZM6 11.333C6 12.253 5.328 13 4.5 13S3 12.254 3 11.333c0-.706.882-2.29 1.294-2.99a.238.238 0 0 1 .412 0c.412.7 1.294 2.284 1.294 2.99M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5m-1.5-3A.5.5 0 0 1 10 3c1.162 0 2.35.584 2.947 1.776a.5.5 0 1 1-.894.448C11.649 4.416 10.838 4 10 4a.5.5 0 0 1-.5-.5M7 3.5a.5.5 0 0 0-.5-.5c-1.162 0-2.35.584-2.947 1.776a.5.5 0 1 0 .894.448C4.851 4.416 5.662 4 6.5 4a.5.5 0 0 0 .5-.5"/>
+                                  </svg>
+                                <span class=" font-semibold text-neutral-900">Resi Stuck</span>
+                                <span class=" font-semibold text-neutral-900 text-2xl">30</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div id="chart3" class="max-w-24"></div>
+                                <a class="text-center text-sm text-primary-700 underline" href="#">detail</a>
+                            </div>
+                        </div>
+                        <div class="bg-white px-4 py-5 rounded-lg flex flex-row justify-between items-center">
+                            <div class="desc flex flex-col">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#22c55e" class="w-6 h-6 mb-2" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5"/>
+                                </svg>
+                                <span class=" font-semibold text-neutral-900">Kiriman Berhasil</span>
+                                <span class=" font-semibold text-neutral-900 text-2xl">110</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div id="chart4" class="max-w-24"></div>
+                                <a class="text-center text-sm text-primary-700 underline" href="#">detail</a>
+                            </div>
+                        </div>
+                        <div class="bg-white px-4 py-5 rounded-lg flex flex-row justify-between items-center">
+                            <div class="desc flex flex-col">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#dc2626" class="w-6 h-6 mb-2" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.5 3.5 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.5 4.5 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5"/>
+                                  </svg>
+                                <span class=" font-semibold text-neutral-900">Kiriman Return</span>
+                                <span class=" font-semibold text-neutral-900 text-2xl">10</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div id="chart5" class="max-w-24"></div>
+                                <a class="text-center text-sm text-primary-700 underline" href="#">detail</a>
+                            </div>
+                        </div>
+                        <div class="bg-white px-4 py-5 rounded-lg flex flex-row justify-between items-center">
+                            <div class="desc flex flex-col">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#1d4ed8" class="w-6 h-6 mb-2" viewBox="0 0 16 16">
+                                    <path d="M4.968 9.75a.5.5 0 1 0-.866.5A4.5 4.5 0 0 0 8 12.5a4.5 4.5 0 0 0 3.898-2.25.5.5 0 1 0-.866-.5A3.5 3.5 0 0 1 8 11.5a3.5 3.5 0 0 1-3.032-1.75M7 5.116V5a1 1 0 0 0-1-1H3.28a1 1 0 0 0-.97 1.243l.311 1.242A2 2 0 0 0 4.561 8H5a2 2 0 0 0 1.994-1.839A3 3 0 0 1 8 6c.393 0 .74.064 1.006.161A2 2 0 0 0 11 8h.438a2 2 0 0 0 1.94-1.515l.311-1.242A1 1 0 0 0 12.72 4H10a1 1 0 0 0-1 1v.116A4.2 4.2 0 0 0 8 5c-.35 0-.69.04-1 .116"/>
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-1 0A7 7 0 1 0 1 8a7 7 0 0 0 14 0"/>
+                                </svg>
+                                <span class=" font-semibold text-neutral-900">Total Kiriman</span>
+                                <span class=" font-semibold text-neutral-900 text-2xl">140</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <div id="chart6" class="max-w-24"></div>
+                                <a class="text-center text-sm text-primary-700 underline" href="#">detail</a>
+                            </div>
+                        </div>
+                    </div>                    
+                <!-- /widget area -->
+
+                <!-- tab heading area -->
+                <div class="wrapper-tab-data pt-4">
+                    <ul class="flex flex-wrap md:space-y-0 lg:space-y-0 xl:space-y-0 -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#tab-upload-data" data-tabs-active-classes="bg-primary-700 text-white" data-tabs-inactive-classes="bg-neutral-200 text-neutral-900" role="tablist">
+                        <li class="me-2 mb-3 md:mb-0 lg:mb-0 xl:mb-0" role="presentation">
+                            <button class="flex flex-row justify-start items-center space-x-2 py-2.5 px-6 rounded-full" id="profile-styled-tab" data-tabs-target="#history-upload" type="button" role="tab" aria-controls="history-upload" aria-selected="false">
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                    <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                <span>History Upload</span>
+                            </button>
+                        </li>
+                        <li class="me-2" role="presentation">
+                            <button class="flex flex-row justify-start items-center space-x-2 py-2.5 px-6 rounded-full" id="dashboard-styled-tab" data-tabs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="false">
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                                    <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                <span>Data</span>
+                            </button>
+                        </li>
+                        <li class="me-2" role="presentation">
+                            <button class="flex flex-row justify-start items-center space-x-2 py-2.5 px-6 rounded-full" id="settings-styled-tab" data-tabs-target="#grafik" type="button" role="tab" aria-controls="grafik" aria-selected="false">
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5">
+                                    <path d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                <span>Traffic</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- /tab heading area -->
+
+                <!-- tab body area -->
+                <div id="tab-upload-data">
+                    <div id="history-upload" class="hidden" role="tabpanel">
+                        <!-- table history upload area -->
+                        <div class="table-area pt-2 pb-6">
+                            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                                <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                                    <thead class="text-xs text-white bg-primary-700 capitalize font-normal text-center">
+                                        <tr>
+                                            <th scope="col" class="px-6 py-4">
+                                                Tanggal
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Dalam Pengiriman
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Kiriman Bermasalah
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Resi Stuck
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Kiriman Berhasil
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Kiriman Return
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
+                                                Total Kiriman
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">                                            
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                            <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                12/04/2024
+                                            </td>
+                                            <td class="px-6 py-4 text-center">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">24</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">35</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                            <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                12/04/2024
+                                            </td>
+                                            <td class=" px-6 py-4">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">24</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">35</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                            <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                12/04/2024
+                                            </td>
+                                            <td class="px-6 py-4 text-center">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">24</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">35</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                            <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                12/04/2024
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">24</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">35</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                            <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                12/04/2024
+                                            </td>
+                                            <td class="px-6 py-4 text-center">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">24</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">35</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                            <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                                12/04/2024
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">24</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">20</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">15</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="underline" href="#">35</a>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- pagination -->                            
+
+                                <div class="flex mt-4 flex-row  justify-end">
+                                    <!-- Previous Button -->
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 me-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                        <svg class="w-3.5 h-3.5 me-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                                        </svg>
+                                        Previous
+                                    </a>
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                        Next
+                                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                        </svg>
+                                    </a>
+                                </div>  
+  
+                            <!-- /pagination -->
+                        </div>                    
+                        <!-- /table history upload area -->
+                    </div>
+                    <div id="data" class="hidden" role="tabpanel">
+                        <div class="filter-table-data mt-0 mb-4 flex flex-row justify-end items-center">
+                            <label for="states" class="sr-only">Choose a state</label>
+                            <select id="states" class="bg-neutral-200 text-neutral-900 text-sm border-neutral-300 border-e-0  rounded-s-lg block p-3 max-h-11 ">
+                                <option selected>-- pilih --</option>
+                                <option value="nama">Nama</option>
+                                <option value="nohp">No HP</option>
+                                <option value="resi">Resi</option>
+                                <option value="status">Status</option>
+                            </select>
+                            <input type="text" name="filterdata" id="filterdata" class="border border-neutral-300 text-neutral-700 text-sm border-s-0 border-e-0 rounded-s-none rounded-e-none w-full md:w-44 lg:w-44 xl:w-44 max-h-11 py-2.5" placeholder="search here...">
+                            <button type="button" class="rounded-s-none rounded-e-lg bg-primary-700 text-white px-3 py-3 ">
+                                <svg data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                    <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="table-data-area pt-2 pb-6 relative overflow-x-auto">
+                            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                                <thead class="text-xs text-white bg-primary-700 capitalize font-normal text-center">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-4">
+                                            Nama
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            No HP
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Resi
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Status
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Budi
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            081245785412
+                                        </td>
+                                        <td class="px-6 py-4 flex flex-rows justify-center shrink-0 min-w-40">
+                                            <div class="flex items-center">                                                
+                                                <div class="relative max-w-48">
+                                                    <input id="copyresi-JD12563212456891" type="text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-e-0 border-gray-300 text-gray-500 dark:text-gray-400 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 max-w-40 rounded-s-lg" value="JD12563212456891" readonly disabled />
+                                                </div>
+                                                <button data-tooltip-target="tooltip-copyresi-JD12563212456891" data-copy-to-clipboard-target="copyresi-JD12563212456891" class="flex-shrink-0 z-10 inline-flex items-center py-3.5 px-4 text-sm font-medium text-center text-gray-500 dark:text-gray-400 hover:text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:hover:text-white dark:border-gray-600 max-h-11" type="button">
+                                                    <span id="default-icon">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                                            <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span id="success-icon" class="hidden inline-flex items-center">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <div id="tooltip-copyresi-JD12563212456891" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                    <span id="default-tooltip-message">Copy Resi</span>
+                                                    <span id="success-tooltip-message" class="hidden">Copied!</span>
+                                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                                </div>
+                                            </div>                                           
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            Delivered
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                        </td>                                        
+                                    </tr>
+                                    <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Budi
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            081245785412
+                                        </td>
+                                        <td class="px-6 py-4 flex flex-rows justify-center shrink-0">
+                                            <div class="flex items-center">                                                
+                                                <div class="relative max-w-48">
+                                                    <input id="copyresi-JD12563212456892" type="text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-e-0 border-gray-300 text-gray-500 dark:text-gray-400 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 max-w-40 rounded-s-lg" value="JD12563212456892" readonly disabled />
+                                                </div>
+                                                <button data-tooltip-target="tooltip-copyresi-JD12563212456892" data-copy-to-clipboard-target="copyresi-JD12563212456892" class="flex-shrink-0 z-10 inline-flex items-center py-3.5 px-4 text-sm font-medium text-center text-gray-500 dark:text-gray-400 hover:text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:hover:text-white dark:border-gray-600 max-h-11" type="button">
+                                                    <span id="default-icon">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                                            <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span id="success-icon" class="hidden inline-flex items-center">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <div id="tooltip-copyresi-JD12563212456892" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                    <span id="default-tooltip-message">Copy Resi</span>
+                                                    <span id="success-tooltip-message" class="hidden">Copied!</span>
+                                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                                </div>
+                                            </div>                                            
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            Delivered
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Budi
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            081245785412
+                                        </td>
+                                        <td class="px-6 py-4 flex flex-rows justify-center shrink-0">
+                                            <div class="flex items-center">                                                
+                                                <div class="relative max-w-48">
+                                                    <input id="copyresi-JD12563212456893" type="text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-e-0 border-gray-300 text-gray-500 dark:text-gray-400 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 max-w-40 rounded-s-lg" value="JD12563212456893" readonly disabled />
+                                                </div>
+                                                <button data-tooltip-target="tooltip-copyresi-JD12563212456893" data-copy-to-clipboard-target="copyresi-JD12563212456893" class="flex-shrink-0 z-10 inline-flex items-center py-3.5 px-4 text-sm font-medium text-center text-gray-500 dark:text-gray-400 hover:text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:hover:text-white dark:border-gray-600 max-h-11" type="button">
+                                                    <span id="default-icon">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                                            <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span id="success-icon" class="hidden inline-flex items-center">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <div id="tooltip-copyresi-JD12563212456893" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                    <span id="default-tooltip-message">Copy Resi</span>
+                                                    <span id="success-tooltip-message" class="hidden">Copied!</span>
+                                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                                </div>
+                                            </div>                                           
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            Delivered
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Budi
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            081245785412
+                                        </td>
+                                        <td class="px-6 py-4 flex flex-rows justify-center shrink-0">
+                                            <div class="flex items-center">                                                
+                                                <div class="relative max-w-48">
+                                                    <input id="copyresi-JD12563212456894" type="text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-e-0 border-gray-300 text-gray-500 dark:text-gray-400 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 max-w-40 rounded-s-lg" value="JD12563212456894" readonly disabled />
+                                                </div>
+                                                <button data-tooltip-target="tooltip-copyresi-JD12563212456894" data-copy-to-clipboard-target="copyresi-JD12563212456894" class="flex-shrink-0 z-10 inline-flex items-center py-3.5 px-4 text-sm font-medium text-center text-gray-500 dark:text-gray-400 hover:text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:hover:text-white dark:border-gray-600 max-h-11" type="button">
+                                                    <span id="default-icon">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                                            <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span id="success-icon" class="hidden inline-flex items-center">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <div id="tooltip-copyresi-JD12563212456894" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                    <span id="default-tooltip-message">Copy Resi</span>
+                                                    <span id="success-tooltip-message" class="hidden">Copied!</span>
+                                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                                </div>
+                                            </div>                                            
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            Delivered
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Budi
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            081245785412
+                                        </td>
+                                        <td class="px-6 py-4 flex flex-rows justify-center shrink-0">
+                                            <div class="flex items-center">                                                
+                                                <div class="relative max-w-48">
+                                                    <input id="copyresi-JD12563212456895" type="text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-e-0 border-gray-300 text-gray-500 dark:text-gray-400 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 max-w-40 rounded-s-lg" value="JD12563212456895" readonly disabled />
+                                                </div>
+                                                <button data-tooltip-target="tooltip-copyresi-JD12563212456895" data-copy-to-clipboard-target="copyresi-JD12563212456895" class="flex-shrink-0 z-10 inline-flex items-center py-3.5 px-4 text-sm font-medium text-center text-gray-500 dark:text-gray-400 hover:text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:hover:text-white dark:border-gray-600 max-h-11" type="button">
+                                                    <span id="default-icon">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                                            <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span id="success-icon" class="hidden inline-flex items-center">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <div id="tooltip-copyresi-JD12563212456895" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                    <span id="default-tooltip-message">Copy Resi</span>
+                                                    <span id="success-tooltip-message" class="hidden">Copied!</span>
+                                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                                </div>
+                                            </div>                                            
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            Delivered
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd:bg-white even:bg-gray-50 border-b text-center">
+                                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                            Budi
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            081245785412
+                                        </td>
+                                        <td class="px-6 py-4 flex flex-rows justify-center shrink-0">                                            
+                                            <div class="flex items-center">                                                
+                                                <div class="relative max-w-48">
+                                                    <input id="copyresi-JD12563212456896" type="text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-e-0 border-gray-300 text-gray-500 dark:text-gray-400 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 max-w-40 rounded-s-lg shrink-0" value="JD12563212456896" readonly disabled />
+                                                </div>
+                                                <button data-tooltip-target="tooltip-copyresi-JD12563212456896" data-copy-to-clipboard-target="copyresi-JD12563212456896" class="flex-shrink-0 z-10 inline-flex items-center py-3.5 px-4 text-sm font-medium text-center text-gray-500 dark:text-gray-400 hover:text-gray-900 bg-gray-100 border border-gray-300 rounded-e-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:hover:text-white dark:border-gray-600 max-h-11" type="button">
+                                                    <span id="default-icon">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                                            <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span id="success-icon" class="hidden inline-flex items-center">
+                                                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <div id="tooltip-copyresi-JD12563212456896" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                    <span id="default-tooltip-message">Copy Resi</span>
+                                                    <span id="success-tooltip-message" class="hidden">Copied!</span>
+                                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            Delivered
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <a class="text-primary-700 text-sm underline" href="#">detail</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- pagination -->                            
+
+                        <div class="flex mt-0 mb-4 flex-row justify-end">
+                            <!-- Previous Button -->
+                            <a href="#" class="flex items-center justify-center px-3 h-8 me-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                <svg class="w-3.5 h-3.5 me-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                                </svg>
+                                Previous
+                            </a>
+                            <a href="#" class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                Next
+                                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </a>
+                        </div>  
+
+                    <!-- /pagination -->
+                    </div>
+                    <div id="grafik" class="hidden" role="tabpanel">
+                        <div class="grafik-data-area p-4 bg-white rounded-lg mb-6 mt-3">
+                            <div id="chart-delivery"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--  tab body area -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="/assets/js/chart.js"></script>
+</body>
+</html>
