@@ -102,7 +102,7 @@
                 </li>
             </ul>
         </div>
-        <div class="max-w-full w-full flex flex-col md:flex-row xl:flex-row justify-between space-x-0 xl:space-x-6 px-4 xl:px-0 md:px-6 xl:pr-6">
+        <div class="max-w-full w-full flex flex-col md:flex-row xl:flex-row justify-between space-x-0 xl:space-x-6 px-4 xl:px-0 md:px-6 xl:pr-6 pb-8">
             
             <div class="sidebar hidden w-64 grow-0 shrink-0 bg-white p-8 xl:flex xl:flex-col xl:space-y-8 xl:h-screen xl:sticky xl:top-0">
                 <div class="logo">
@@ -207,15 +207,18 @@
                 <!-- /filter -->
 
                 <!-- chart -->
-                <div class="chart-area mt-10 mb-4  bg-neutral-50 rounded-lg flex flex-col md:flex-row lg:flex-row xl:flex-row items-center">
-                    <div class="desc-chart flex flex-col shrink-0 items-center py-6 px-8 rounded-l-lg">
-                        <span class="font-Poppins text-sm text-primary-700 font-semibold">Total Message</span>
-                        <span class="font-poppins text-3xl font-semibold text-primary-700">500</span>
+                <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5 gap-4 ">
+                    
+                    <div class="col-auto md:col-span-1 lg:col-span-1 xl:col-span-1 w-full py-8 items-center rounded-lg chart-area bg-white flex flex-col ">
+                        <span class="font-Poppins items-center text-sm text-primary-700 font-semibold">Total Message</span>
+                        <span class="font-poppins p-4 text-3xl font-semibold text-primary-700">500</span>
                     </div>
-                    <div class="chart px-8 py-4 max-w-full w-full bg-white">
-                        <div id="chart-incoming" class=""></div>
+
+                    <div class="col-auto md:col-span-4 lg:col-span-4 xl:col-span-4 rounded-lg bg-white">
+                        <div id="chart-incoming" class=" min-h-64 md:min-h-min lg:min-h-min xl:min-h-min"></div>
                     </div>
                 </div>
+
                 <!-- chart -->
 
                 <!-- Message by label -->
@@ -233,51 +236,51 @@
                     </div>
                     <hr />
                     <div class="label-list">
-                        <ul class="flex flex-row flex-wrap justify-start space-x-2 my-3">
+                        <ul class="flex flex-row flex-wrap justify-start gap-x-2 my-3">
                             <li class="mb-2">
-                                <input type="radio" id="pelanggan-baru" name="message" value="pelanggan-baru" class="hidden peer" required />
+                                <input type="checkbox" id="pelanggan-baru" name="message" value="pelanggan-baru" class="hidden peer" required />
                                 <label for="pelanggan-baru" class="inline-flex items-center justify-between flex-wrap text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked:border-primary-700 peer-checked:text-white peer-checked:bg-primary-700 cursor-pointer">                           
                                     <span>Pelanggan Baru (80)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="pesanan-baru" name="message" value="pesanan-baru" class="hidden peer" required />
+                                <input type="checkbox" id="pesanan-baru" name="message" value="pesanan-baru" class="hidden peer" required />
                                 <label for="pesanan-baru" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked:border-primary-700 peer-checked:text-white peer-checked:bg-primary-700 cursor-pointer">                           
                                     <span>Pesanan Baru (45)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="menunggu-bayar" name="message" value="menunggu-bayar" class="hidden peer" required />
+                                <input type="checkbox" id="menunggu-bayar" name="message" value="menunggu-bayar" class="hidden peer" required />
                                 <label for="menunggu-bayar" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked:border-primary-700 peer-checked:text-white peer-checked:bg-primary-700 cursor-pointer">                           
                                     <span>Menunggu Bayar (37)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="telah-membayar" name="message" value="telah-membayar" class="hidden peer" required />
+                                <input type="checkbox" id="telah-membayar" name="message" value="telah-membayar" class="hidden peer" required />
                                 <label for="telah-membayar" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked:border-primary-700 peer-checked:text-white peer-checked:bg-primary-700 cursor-pointer">                           
                                     <span>Telah Membayar (58)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="pesanan-selesai" name="message" value="pesanan-selesai" class="hidden peer" required />
+                                <input type="checkbox" id="pesanan-selesai" name="message" value="pesanan-selesai" class="hidden peer" required />
                                 <label for="pesanan-selesai" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked:border-primary-700 peer-checked:text-white peer-checked:bg-primary-700 cursor-pointer">                           
                                     <span>Pesanan Selesai (16)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="penting" name="message" value="penting" class="hidden peer" required />
+                                <input type="checkbox" id="penting" name="message" value="penting" class="hidden peer" required />
                                 <label for="penting" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked:border-primary-700 peer-checked:text-white peer-checked:bg-primary-700 cursor-pointer">                           
                                     <span>Penting (40)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="tindak-lanjut" name="message" value="tindak-lanjut" class="hidden peer" required />
+                                <input type="checkbox" id="tindak-lanjut" name="message" value="tindak-lanjut" class="hidden peer" required />
                                 <label for="tindak-lanjut" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked:border-primary-700 peer-checked:text-white peer-checked:bg-primary-700 cursor-pointer">                           
                                     <span>Tindak Lanjut (30)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="prospek" name="message" value="prospek" class="hidden peer" required />
+                                <input type="checkbox" id="prospek" name="message" value="prospek" class="hidden peer" required />
                                 <label for="prospek" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked:border-primary-700 peer-checked:text-white peer-checked:bg-primary-700 cursor-pointer">                           
                                     <span>Prospek (12)</span>
                                 </label>
@@ -302,51 +305,51 @@
                     </div>
                     <hr />
                     <div class="label-list">
-                        <ul class="flex flex-row flex-wrap justify-start space-x-2 my-3">
+                        <ul class="flex flex-row flex-wrap justify-start gap-x-2 my-3">
                             <li class="mb-2">
-                                <input type="radio" id="exclude-pelanggan-baru" name="exclude-message" value="exclude-pelanggan-baru" class="hidden peer/exclude" required />
+                                <input type="checkbox" id="exclude-pelanggan-baru" name="exclude-message" value="exclude-pelanggan-baru" class="hidden peer/exclude" required />
                                 <label for="exclude-pelanggan-baru" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked/exclude:border-primary-700 peer-checked/exclude:text-white peer-checked/exclude:bg-primary-700 cursor-pointer">                           
                                     <span>Pelanggan Baru (80)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="exclude-pesanan-baru" name="exclude-message" value="exclude-pesanan-baru" class="hidden peer/exclude" required />
+                                <input type="checkbox" id="exclude-pesanan-baru" name="exclude-message" value="exclude-pesanan-baru" class="hidden peer/exclude" required />
                                 <label for="exclude-pesanan-baru" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked/exclude:border-primary-700 peer-checked/exclude:text-white peer-checked/exclude:bg-primary-700 cursor-pointer">                           
                                     <span>Pesanan Baru (45)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="exclude-menunggu-bayar" name="exclude-message" value="exclude-menunggu-bayar" class="hidden peer/exclude" required />
+                                <input type="checkbox" id="exclude-menunggu-bayar" name="exclude-message" value="exclude-menunggu-bayar" class="hidden peer/exclude" required />
                                 <label for="exclude-menunggu-bayar" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked/exclude:border-primary-700 peer-checked/exclude:text-white peer-checked/exclude:bg-primary-700 cursor-pointer">                           
                                     <span>Menunggu Bayar (37)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="exclude-telah-membayar" name="exclude-message" value="exclude-telah-membayar" class="hidden peer/exclude" required />
+                                <input type="checkbox" id="exclude-telah-membayar" name="exclude-message" value="exclude-telah-membayar" class="hidden peer/exclude" required />
                                 <label for="exclude-telah-membayar" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked/exclude:border-primary-700 peer-checked/exclude:text-white peer-checked/exclude:bg-primary-700 cursor-pointer">                           
                                     <span>Telah Membayar (58)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="exclude-pesanan-selesai" name="exclude-message" value="exclude-pesanan-selesai" class="hidden peer/exclude" required />
+                                <input type="checkbox" id="exclude-pesanan-selesai" name="exclude-message" value="exclude-pesanan-selesai" class="hidden peer/exclude" required />
                                 <label for="exclude-pesanan-selesai" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked/exclude:border-primary-700 peer-checked/exclude:text-white peer-checked/exclude:bg-primary-700 cursor-pointer">                           
                                     <span>Pesanan Selesai (16)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="exclude-penting" name="exclude-message" value="exclude-penting" class="hidden peer/exclude" required />
+                                <input type="checkbox" id="exclude-penting" name="exclude-message" value="exclude-penting" class="hidden peer/exclude" required />
                                 <label for="exclude-penting" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked/exclude:border-primary-700 peer-checked/exclude:text-white peer-checked/exclude:bg-primary-700 cursor-pointer">                           
                                     <span>Penting (40)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="exclude-tindak-lanjut" name="exclude-message" value="exclude-tindak-lanjut" class="hidden peer/exclude" required />
+                                <input type="checkbox" id="exclude-tindak-lanjut" name="exclude-message" value="exclude-tindak-lanjut" class="hidden peer/exclude" required />
                                 <label for="exclude-tindak-lanjut" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked/exclude:border-primary-700 peer-checked/exclude:text-white peer-checked/exclude:bg-primary-700 cursor-pointer">                           
                                     <span>Tindak Lanjut (30)</span>
                                 </label>
                             </li>
                             <li class="mb-2">
-                                <input type="radio" id="exclude-prospek" name="exclude-message" value="exclude-prospek" class="hidden peer/exclude" required />
+                                <input type="checkbox" id="exclude-prospek" name="exclude-message" value="exclude-prospek" class="hidden peer/exclude" required />
                                 <label for="exclude-prospek" class="inline-flex items-center justify-between text-xxs border border-neutral-500 text-neutral-500 px-2.5 py-1 rounded-full peer-checked/exclude:border-primary-700 peer-checked/exclude:text-white peer-checked/exclude:bg-primary-700 cursor-pointer">                           
                                     <span>Prospek (12)</span>
                                 </label>
@@ -357,44 +360,120 @@
                 <!-- Exclude Message -->
 
                 <!-- table data -->
-                <div id="table-data" class="!mb-6">
-                    <table id="table-incoming-message" class="bg-white rounded-lg stripe hover">
-                        <thead>
-                            <tr class=" font-Poppins text-sm text-primary-700">
-                                <th>Nama</th>
-                                <th class="!text-left">No HP</th>
-                                <th>First Chat</th>
-                                <th>Timestamp</th>
-                                <th></th>
+                
+
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                        <thead class="text-xs bg-primary-700 text-neutral-50 uppercase">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Nama
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    No HP
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    First Chat
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Timestamp
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    
+                                </th>
                             </tr>
                         </thead>
-                        <tbody class=" text-sm text-neutral-800">
-                            <tr>
-                                <td class="!py-3">Budi</td>
-                                <td class="!py-3 !text-left">08124524521548</td>
-                                <td class="!py-3">Selamat malam nama saya...</td>
-                                <td class="!py-3">17 April 2024 15:30</td>
-                                <td>
-                                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-primary-700 no-underline hover:underline">action</a>
+                        <tbody>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">                    
+                                </th>                
+                                <td class="px-6 py-4">
+                                    Budi Gunawan
+                                </td>
+                                <td class="px-6 py-4">
+                                    08124524521548
+                                </td>
+                                <td class="px-6 py-4">
+                                    Halo, nama saya Budi...
+                                </td>
+                                <td class="px-6 py-4">
+                                    17 April 2024 13:15:24
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="#" class=" text-primary-700 hover:underline">action</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="!py-3">Budi</td>
-                                <td class="!py-3 !text-left">08124524521548</td>
-                                <td class="!py-3">Selamat malam nama saya...</td>
-                                <td class="!py-3">17 April 2024 15:30</td>
-                                <td>
-                                    <a href="#" class="text-primary-700 no-underline hover:underline" target="_blank" rel="noopener noreferrer">action</a>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">                    
+                                </th>                
+                                <td class="px-6 py-4">
+                                    Budi Gunawan
+                                </td>
+                                <td class="px-6 py-4">
+                                    08124524521548
+                                </td>
+                                <td class="px-6 py-4">
+                                    Halo, nama saya Budi...
+                                </td>
+                                <td class="px-6 py-4">
+                                    17 April 2024 13:15:24
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="#" class=" text-primary-700 hover:underline">action</a>
                                 </td>
                             </tr>
+                            <tr class="odd:bg-white even:bg-gray-50 border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">                    
+                                </th>                
+                                <td class="px-6 py-4">
+                                    Budi Gunawan
+                                </td>
+                                <td class="px-6 py-4">
+                                    08124524521548
+                                </td>
+                                <td class="px-6 py-4">
+                                    Halo, nama saya Budi...
+                                </td>
+                                <td class="px-6 py-4">
+                                    17 April 2024 13:15:24
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="#" class=" text-primary-700 hover:underline">action</a>
+                                </td>
+                            </tr>
+                        
                         </tbody>
                     </table>
                 </div>
 
-                
                 <!-- table data -->
 
                 <!-- table pagination -->
+                <!-- pagination -->                            
+
+                    <div class="flex mt-4 flex-row  justify-end">
+                        <!-- Previous Button -->
+                        <a href="#" class="flex items-center justify-center px-3 h-8 me-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <svg class="w-3.5 h-3.5 me-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                            </svg>
+                            Previous
+                        </a>
+                        <a href="#" class="flex items-center justify-center px-3 h-8 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                            Next
+                            <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>  
+
+                <!-- /pagination -->
                 <!-- /table pagination -->
 
 
@@ -407,6 +486,5 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/v/dt/dt-2.0.5/r-3.0.2/datatables.min.js"></script>
     <script src="./assets/js/chart.js"></script>
-    <script src="./assets/js/table.js"></script>
 </body>
 </html>

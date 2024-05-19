@@ -7,7 +7,7 @@ const options = {
     height: "360px",
     maxWidth: "100%",
     type: "area",
-    fontFamily: "Inter, sans-serif",
+    fontFamily: "Inter, sans-serif",     
     dropShadow: {
       enabled: false,
     },
@@ -35,7 +35,7 @@ const options = {
       // shade: "#1C64F2",
       // gradientToColors: ["#1C64F2"],
     },
-  },
+  },   
   dataLabels: {
     enabled: false,
   },
@@ -94,7 +94,7 @@ const options = {
       show: true,
       align: 'right'
     }
-  },
+  },    
 }
 
 if (document.getElementById("chart-data") && typeof ApexCharts !== 'undefined') {
@@ -129,7 +129,7 @@ chartData.forEach((data, index) => {
           size: '35%',
         },
         dataLabels: {
-          show: true,
+          show: true,       
           value: {
             show: true,
             fontSize: '12px',
@@ -150,7 +150,7 @@ chartData.forEach((data, index) => {
     series: data.series,
     labels: [''],
   };
-
+  
   var chartRadial = new ApexCharts(document.querySelector("#chart" + (index + 1)), radialOptions);
   chartRadial.render();
 
@@ -164,7 +164,7 @@ const optionsDelivery = {
     height: "360px",
     maxWidth: "100%",
     type: "area",
-    fontFamily: "Inter, sans-serif",
+    fontFamily: "Inter, sans-serif",     
     dropShadow: {
       enabled: false,
     },
@@ -192,7 +192,7 @@ const optionsDelivery = {
       // shade: "#1C64F2",
       // gradientToColors: ["#1C64F2"],
     },
-  },
+  },   
   dataLabels: {
     enabled: false,
   },
@@ -261,7 +261,7 @@ const optionsDelivery = {
       show: true,
       align: 'right'
     }
-  },
+  },    
 }
 
 if (document.getElementById("chart-delivery") && typeof ApexCharts !== 'undefined') {
@@ -279,11 +279,11 @@ if (document.getElementById("chart-delivery") && typeof ApexCharts !== 'undefine
  */
 const optionsIncomingMessage = {
   chart: {
-    height: "100%",
+    height: "124px",
     width: '100%',
-    maxWidth: "auto",
+    maxWidth: "100%",
     type: "area",
-    fontFamily: "Inter, sans-serif",
+    fontFamily: "Inter, sans-serif",     
     dropShadow: {
       enabled: false,
     },
@@ -311,7 +311,7 @@ const optionsIncomingMessage = {
       // shade: "#1C64F2",
       // gradientToColors: ["#1C64F2"],
     },
-  },
+  },   
   dataLabels: {
     enabled: false,
   },
@@ -322,14 +322,14 @@ const optionsIncomingMessage = {
     show: true,
     strokeDashArray: 4,
     padding: {
-      left: 35,
-      right: 4,
+      left: 2,
+      right: 2,
       top: 0
     },
   },
-  series: [
+  series: [    
     {
-      name: "Total Message",
+      name: "Kiriman Berhasil",
       data: [310, 165, 475, 325, 225, 265],
       color: "#22c55e",
     },
@@ -337,7 +337,7 @@ const optionsIncomingMessage = {
   xaxis: {
     categories: ['01/02/2024', '02/02/2024', '03/02/2024', '04/02/2024', '05/02/2024', '07/02/2024', '08/02/2024'],
     labels: {
-      show: true,
+      show: false,
     },
     axisBorder: {
       show: true,
@@ -352,13 +352,14 @@ const optionsIncomingMessage = {
     max: 500,
     stepSize: 100,
     labels:{
-      show: false,
+      show: true,
       align: 'right'
     }
-  },
+  },    
 }
 
 if (document.getElementById("chart-incoming") && typeof ApexCharts !== 'undefined') {
   const chart = new ApexCharts(document.getElementById("chart-incoming"), optionsIncomingMessage);
   chart.render();
 }
+
