@@ -902,6 +902,10 @@ video {
   width: 100%;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .min-w-40 {
   min-width: 10rem;
 }
@@ -1861,6 +1865,10 @@ video {
     width: 18rem;
   }
 
+  .md\:w-80 {
+    width: 20rem;
+  }
+
   .md\:max-w-72 {
     max-width: 18rem;
   }
@@ -1963,6 +1971,10 @@ video {
 
   .lg\:w-72 {
     width: 18rem;
+  }
+
+  .lg\:w-80 {
+    width: 20rem;
   }
 
   .lg\:max-w-72 {
@@ -2082,6 +2094,10 @@ video {
 
   .xl\:w-72 {
     width: 18rem;
+  }
+
+  .xl\:w-80 {
+    width: 20rem;
   }
 
   .xl\:max-w-72 {
